@@ -79,14 +79,46 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Josetech Power Consultant — Electrical Solutions for Nigerian Businesses" },
+      {
+        name: "description",
+        content:
+          "Safe, reliable and efficient electrical installation, maintenance and power appliance solutions for businesses across Nigeria. Certified. Trusted. On time.",
+      },
+      { name: "author", content: "Josetech Power Consultant & Appliances Limited" },
+      { name: "robots", content: "index, follow" },
+
+      // Open Graph — controls WhatsApp, LinkedIn, Facebook, Slack previews
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:url", content: "https://josetech-power.vercel.app/" },
+      { property: "og:site_name", content: "Josetech Power Consultant" },
+      {
+        property: "og:title",
+        content: "Josetech Power Consultant — Electrical Solutions for Nigerian Businesses",
+      },
+      {
+        property: "og:description",
+        content:
+          "Safe, reliable and efficient electrical installation, maintenance and power appliance solutions for businesses across Nigeria. Certified. Trusted. On time.",
+      },
+      { property: "og:image", content: "https://josetech-power.vercel.app/images/og-preview.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Josetech Power Consultant — Nigerian Electrical Experts" },
+
+      // Twitter / X card
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Josetech Power Consultant — Electrical Solutions for Nigerian Businesses",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Safe, reliable and efficient electrical installation, maintenance and power appliance solutions for businesses across Nigeria.",
+      },
+      { name: "twitter:image", content: "https://josetech-power.vercel.app/images/og-preview.png" },
+      { name: "twitter:image:alt", content: "Josetech Power Consultant — Nigerian Electrical Experts" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
