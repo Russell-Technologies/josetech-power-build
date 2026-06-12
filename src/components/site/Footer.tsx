@@ -1,21 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { Bolt } from "./Icons";
 
 export default function Footer() {
   return (
     <footer className="bg-[#111] text-[#bbb]">
       <div className="mx-auto max-w-[1280px] px-6 py-16 grid gap-10 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#e5193a]">
-              <Bolt className="h-5 w-5 text-white" />
-            </span>
-            <div className="leading-tight">
-              <div className="text-[13px] font-extrabold text-white">JOSETECH POWER CONSULTANT</div>
-              <div className="text-[10px]">
-                & APPLIANCES LIMITED · <span className="text-[#e5193a]">RC 8893411</span>
-              </div>
-            </div>
+          <div className="flex items-center mb-4">
+            <img
+              src="/images/logo.webp"
+              alt="Josetech Power Consultant & Appliances Limited"
+              className="h-12 w-auto rounded-lg object-contain"
+            />
           </div>
           <p className="text-[13px] leading-relaxed">
             Safe, reliable, and efficient electrical solutions for businesses across Nigeria.

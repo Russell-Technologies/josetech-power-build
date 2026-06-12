@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Bolt } from "./Icons";
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,18 +14,12 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-[#111] text-white" style={{ height: 68 }}>
       <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#e5193a]">
-            <Bolt className="h-5 w-5 text-white" />
-          </span>
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="text-[13px] font-extrabold tracking-wide">
-              JOSETECH POWER CONSULTANT
-            </span>
-            <span className="text-[10px] text-[#bbb]">
-              & APPLIANCES LIMITED · <span className="text-[#e5193a]">RC 8893411</span>
-            </span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/images/logo.webp"
+            alt="Josetech Power Consultant & Appliances Limited"
+            className="h-11 w-auto rounded-lg object-contain"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] font-semibold text-[#bbb]">
