@@ -20,8 +20,12 @@ export default function Nav() {
             <Bolt className="h-5 w-5 text-white" />
           </span>
           <span className="hidden sm:flex flex-col leading-tight">
-            <span className="text-[13px] font-extrabold tracking-wide">JOSETECH POWER CONSULTANT</span>
-            <span className="text-[10px] text-[#bbb]">& APPLIANCES LIMITED · <span className="text-[#e5193a]">RC 8893411</span></span>
+            <span className="text-[13px] font-extrabold tracking-wide">
+              JOSETECH POWER CONSULTANT
+            </span>
+            <span className="text-[10px] text-[#bbb]">
+              & APPLIANCES LIMITED · <span className="text-[#e5193a]">RC 8893411</span>
+            </span>
           </span>
         </Link>
 
@@ -40,10 +44,21 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/contact" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5">Get a Quote</Link>
+          <Link to="/contact" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5">
+            Get a Quote
+          </Link>
           <button onClick={() => setOpen(!open)} className="md:hidden text-white" aria-label="Menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
           </button>
         </div>
@@ -51,7 +66,13 @@ export default function Nav() {
       {open && (
         <div className="md:hidden bg-[#0a0a0a] px-6 py-4 flex flex-col gap-3 text-[#bbb]">
           {links.map((l) => (
-            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="py-1" activeProps={{ className: "text-[#e5193a]" }}>
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setOpen(false)}
+              className="py-1"
+              activeProps={{ className: "text-[#e5193a]" }}
+            >
               {l.label}
             </Link>
           ))}

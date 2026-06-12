@@ -26,7 +26,8 @@
   color-scheme: light;
 }
 
-html, body {
+html,
+body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   background: #ffffff;
   color: #1a1a1a;
@@ -67,7 +68,9 @@ html, body {
   font-size: 14px;
   transition: background 0.15s;
 }
-.btn-primary:hover { background: #c4142f; }
+.btn-primary:hover {
+  background: #c4142f;
+}
 
 .btn-ghost {
   display: inline-flex;
@@ -82,7 +85,9 @@ html, body {
   font-size: 14px;
   transition: border-color 0.15s;
 }
-.btn-ghost:hover { border-color: #ffffff; }
+.btn-ghost:hover {
+  border-color: #ffffff;
+}
 
 .btn-ghost-light {
   display: inline-flex;
@@ -102,4 +107,96 @@ html, body {
   border: 1px solid #eeeeee;
   border-radius: 10px;
   padding: 28px;
+}
+
+/* ─── Scroll Animation Base States ─────────────────────────── */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.55s ease-out;
+}
+.anim-fade-up.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-fade-up-sm {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+.anim-fade-up-sm.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.anim-slide-left.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.anim-slide-right.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-fade-up-text {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.anim-fade-up-text.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Slider ─────────────────────────────────────────────────── */
+.hero-slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+.hero-slider-img.active {
+  opacity: 1;
+}
+
+/* ─── Reduced Motion Override ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-up-sm,
+  .anim-slide-left,
+  .anim-slide-right,
+  .anim-fade-up-text {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-slider-img {
+    transition: none !important;
+  }
 }
